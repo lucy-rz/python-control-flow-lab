@@ -50,15 +50,13 @@
 # Use the int() function to convert the string returned from input() into an integer
 # Start with an if that checks if the age is less than 3
 
-dog_age = int(input('Input a dog\'s age: '))
+# dog_age = int(input('Input a dog\'s age: '))
 
-if dog_age < 3:
-    dog_age *= 10
-else:
-    dog_age = 2 * 10 + 7 * (dog_age - 2)
-print(f'The dog\s age in dog years is {dog_age}')
-
-
+# if dog_age < 3:
+#     dog_age *= 10
+# else:
+#     dog_age = 2 * 10 + 7 * (dog_age - 2)
+# print(f'The dog\s age in dog years is {dog_age}')
 
 
 # exercise-04 What kind of Triangle?
@@ -76,10 +74,19 @@ print(f'The dog\s age in dog years is {dog_age}')
 # 3. Print a message such as:
 #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
 
+# print('Enter the lengths of three side of a triangle: ')
+# a = input('a: ')
+# b = input('b: ')
+# c = input('c: ')
 
+# if a == b and b == c:
+#     print(f'A triangle with sides of {a}, {b} & {c} is a equilateral triangle')
+# elif a != b and b != c and a != c:
+#     print(f'A triangle with sides of {a}, {b} & {c} is a scalene triangle')
+# else:
+#     print(f'A triangle with sides of {a}, {b} & {c} is a isosceles triangle')
 
-
-
+   
 
 # exercise-05 Fibonacci sequence for first 50 terms
 
@@ -99,7 +106,16 @@ print(f'The dog\s age in dog years is {dog_age}')
 # Use a while loop with a looping variable, or look into Python ranges, e.g.:
 #   for n in range(50):
 
-
+# v1 = 1
+# v2 = 1
+# print('term: 0 / number: 0')
+# print('term: 1 / number: 1')
+# print('term: 2 / number: 1')
+# for n in range(3, 50):
+#     next = v1 + v2
+#     v1 = v2
+#     v2 = next
+#     print(f'term: {n} / number: {next}')
 
 
 
