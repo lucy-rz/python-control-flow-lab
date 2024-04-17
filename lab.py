@@ -10,12 +10,12 @@
 #         For example, if some_char in 'abc':
 
 
-# a_letter = input('Please enter a letter from the alphabet (a-z or A-Z): ')
+a_letter = input('Please enter a letter from the alphabet (a-z or A-Z): ')
 
-# if a_letter in 'aeiou' or a_letter in 'AEIOU':
-#     print(f'The letter {a_letter} is a vowel')
-# else:
-#     print(f'The letter {a_letter} is a consonant')
+if a_letter in 'aeiou' or a_letter in 'AEIOU':
+    print(f'The letter {a_letter} is a vowel')
+else:
+    print(f'The letter {a_letter} is a consonant')
 
 
 # exercise-02 Length of Phrase
@@ -27,11 +27,11 @@
 #      - What you entered is xx characters long
 # 3. Return to step 1, unless the word 'quit' was entered.
 
-# word_phrase = ''
-# while word_phrase != 'quit':
-#     word_phrase = input('Please enter a word or phrase: ')
-#     length = len(word_phrase)
-#     print(f'What you entered is {length} characters long')
+word_phrase = ''
+while word_phrase != 'quit':
+    word_phrase = input('Please enter a word or phrase: ')
+    length = len(word_phrase)
+    print(f'What you entered is {length} characters long')
 
 
 
@@ -50,13 +50,13 @@
 # Use the int() function to convert the string returned from input() into an integer
 # Start with an if that checks if the age is less than 3
 
-# dog_age = int(input('Input a dog\'s age: '))
+dog_age = int(input('Input a dog\'s age: '))
 
-# if dog_age < 3:
-#     dog_age *= 10
-# else:
-#     dog_age = 2 * 10 + 7 * (dog_age - 2)
-# print(f'The dog\s age in dog years is {dog_age}')
+if dog_age < 3:
+    dog_age *= 10
+else:
+    dog_age = 2 * 10 + 7 * (dog_age - 2)
+print(f'The dog\s age in dog years is {dog_age}')
 
 
 # exercise-04 What kind of Triangle?
@@ -74,17 +74,17 @@
 # 3. Print a message such as:
 #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
 
-# print('Enter the lengths of three side of a triangle: ')
-# a = input('a: ')
-# b = input('b: ')
-# c = input('c: ')
+print('Enter the lengths of three side of a triangle: ')
+a = input('a: ')
+b = input('b: ')
+c = input('c: ')
 
-# if a == b and b == c:
-#     print(f'A triangle with sides of {a}, {b} & {c} is a equilateral triangle')
-# elif a != b and b != c and a != c:
-#     print(f'A triangle with sides of {a}, {b} & {c} is a scalene triangle')
-# else:
-#     print(f'A triangle with sides of {a}, {b} & {c} is a isosceles triangle')
+if a == b and b == c:
+    print(f'A triangle with sides of {a}, {b} & {c} is a equilateral triangle')
+elif a != b and b != c and a != c:
+    print(f'A triangle with sides of {a}, {b} & {c} is a scalene triangle')
+else:
+    print(f'A triangle with sides of {a}, {b} & {c} is a isosceles triangle')
 
    
 
@@ -106,16 +106,16 @@
 # Use a while loop with a looping variable, or look into Python ranges, e.g.:
 #   for n in range(50):
 
-# v1 = 1
-# v2 = 1
-# print('term: 0 / number: 0')
-# print('term: 1 / number: 1')
-# print('term: 2 / number: 1')
-# for n in range(3, 50):
-#     next = v1 + v2
-#     v1 = v2
-#     v2 = next
-#     print(f'term: {n} / number: {next}')
+v1 = 1
+v2 = 1
+print('term: 0 / number: 0')
+print('term: 1 / number: 1')
+print('term: 2 / number: 1')
+for n in range(3, 50):
+    next = v1 + v2
+    v1 = v2
+    v2 = next
+    print(f'term: {n} / number: {next}')
 
 
 
@@ -141,3 +141,37 @@
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
 
+month = input('Enter the month of the year (Jan - Dec): ')
+day = int(input('Enter the day of the month: '))
+season = ''
+
+
+if month in ('Jan', 'Feb'):
+    season = 'Winter'
+elif month in ('Apr', 'May'):
+    season = 'Spring'
+elif month in ('Jul', 'Aug'):
+    season = 'Summer'
+elif month in ('Oct', 'Nov'):
+    season = 'Fall'
+elif month == 'Dec':
+    if day >= 21:
+        season = 'Winter'
+    else:
+        season = 'Fall'
+elif month == 'Mar':
+    if day >= 20:
+        season = 'Spring'
+    else:
+        season = 'Winter'
+elif month == 'Jun':
+    if day >= 21:
+        season = 'Summer'
+    else:
+        season = 'Spring'
+elif month == 'Sep':
+    if day >= 22:
+        season = 'Fall'
+    else:
+        season = 'Summer'
+print(f'{month} {day} is in {season}')
